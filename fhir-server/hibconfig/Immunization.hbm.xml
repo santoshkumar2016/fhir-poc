@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 16, 2016 10:45:37 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="Immunization" table="immunization" catalog="qrda">
+        <id name="immzId" type="java.lang.Integer">
+            <column name="immzId" />
+            <generator class="identity" />
+        </id>
+        <property name="cid" type="java.lang.Integer">
+            <column name="cId" />
+        </property>
+        <property name="immunization" type="string">
+            <column name="immunization" length="200" />
+        </property>
+        <property name="vaccineLot" type="string">
+            <column name="vaccineLot" length="200" />
+        </property>
+        <property name="manufacturer" type="string">
+            <column name="manufacturer" length="200" />
+        </property>
+        <property name="expirationDate" type="timestamp">
+            <column name="expirationDate" length="0" />
+        </property>
+        <property name="informationSource" type="string">
+            <column name="informationSource" length="200" />
+        </property>
+        <property name="registryStatus" type="string">
+            <column name="registryStatus" length="200" />
+        </property>
+        <property name="administeredAmount" type="string">
+            <column name="administeredAmount" length="200" />
+        </property>
+        <property name="administeredUnit" type="string">
+            <column name="administeredUnit" length="200" />
+        </property>
+        <property name="dateTimeAdministered" type="timestamp">
+            <column name="dateTimeAdministered" length="0" />
+        </property>
+        <property name="administeredAt" type="string">
+            <column name="administeredAt" length="200" />
+        </property>
+        <property name="administeringProviderLastName" type="string">
+            <column name="administeringProviderLastName" length="200" />
+        </property>
+        <property name="administeringProviderMiddleName" type="string">
+            <column name="administeringProviderMiddleName" length="200" />
+        </property>
+        <property name="administeringProviderFirstName" type="string">
+            <column name="administeringProviderFirstName" length="200" />
+        </property>
+        <property name="administrationRoute" type="string">
+            <column name="administrationRoute" length="200" />
+        </property>
+        <property name="vaccineFundingObsMethod" type="string">
+            <column name="vaccineFundingObsMethod" length="200" />
+        </property>
+        <property name="visPresentationDate" type="timestamp">
+            <column name="visPresentationDate" length="0" />
+        </property>
+        <property name="fundingProgramEligCategory" type="string">
+            <column name="fundingProgramEligCategory" length="200" />
+        </property>
+        <property name="noVaccineAdministered" type="string">
+            <column name="noVaccineAdministered" length="200" />
+        </property>
+        <property name="evidenceOfImmunity" type="string">
+            <column name="evidenceOfImmunity" length="200" />
+        </property>
+        <property name="substanceRefusalReason" type="string">
+            <column name="substanceRefusalReason" length="200" />
+        </property>
+        <property name="orderByLastName" type="string">
+            <column name="orderByLastName" length="200" />
+        </property>
+        <property name="orderByMiddleName" type="string">
+            <column name="orderByMiddleName" length="200" />
+        </property>
+        <property name="orderByFirstName" type="string">
+            <column name="orderByFirstName" length="200" />
+        </property>
+        <property name="administeredLocation" type="string">
+            <column name="administeredLocation" length="200" />
+        </property>
+        <property name="fillerOrderNumber" type="string">
+            <column name="fillerOrderNumber" length="200" not-null="true" />
+        </property>
+        <property name="administrationNote" type="string">
+            <column name="administrationNote" length="200" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="createdDate" length="0" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="createdBy" length="200" />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updatedDate" length="0" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="updatedBy" length="200" />
+        </property>
+        <property name="administeringProviderId" type="string">
+            <column name="administeringProviderId" length="100" />
+        </property>
+        <property name="orderByProviderId" type="string">
+            <column name="orderByProviderId" length="100" />
+        </property>
+        <property name="lastExportedDate" type="timestamp">
+            <column name="lastExportedDate" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

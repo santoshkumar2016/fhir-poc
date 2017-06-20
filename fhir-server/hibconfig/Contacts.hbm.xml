@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 16, 2016 10:45:37 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="Contacts" table="contacts" catalog="qrda">
+        <id name="cid" type="java.lang.Integer">
+            <column name="CID" />
+            <generator class="identity" />
+        </id>
+        <property name="type" type="string">
+            <column name="TYPE" length="24" not-null="true" />
+        </property>
+        <property name="owner" type="string">
+            <column name="OWNER" length="14" not-null="true" />
+        </property>
+        <property name="company" type="string">
+            <column name="COMPANY" length="72" not-null="true" />
+        </property>
+        <property name="companyContact" type="string">
+            <column name="COMPANY_CONTACT" length="72" not-null="true" />
+        </property>
+        <property name="prefix" type="string">
+            <column name="PREFIX" length="24" not-null="true" />
+        </property>
+        <property name="fname" type="string">
+            <column name="FNAME" length="36" not-null="true" />
+        </property>
+        <property name="mname" type="string">
+            <column name="MNAME" length="36" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="LNAME" length="36" not-null="true" />
+        </property>
+        <property name="credentials" type="string">
+            <column name="CREDENTIALS" length="72" not-null="true" />
+        </property>
+        <property name="nickname" type="string">
+            <column name="NICKNAME" length="48" not-null="true" />
+        </property>
+        <property name="spouse" type="string">
+            <column name="SPOUSE" length="36" not-null="true" />
+        </property>
+        <property name="birthday" type="string">
+            <column name="BIRTHDAY" length="24" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="SEX" length="14" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="TITLE" length="36" not-null="true" />
+        </property>
+        <property name="employer" type="string">
+            <column name="EMPLOYER" length="72" not-null="true" />
+        </property>
+        <property name="address11" type="string">
+            <column name="ADDRESS1_1" length="72" not-null="true" />
+        </property>
+        <property name="address12" type="string">
+            <column name="ADDRESS1_2" length="72" not-null="true" />
+        </property>
+        <property name="city1" type="string">
+            <column name="CITY1" length="24" not-null="true" />
+        </property>
+        <property name="state1" type="string">
+            <column name="STATE1" length="24" not-null="true" />
+        </property>
+        <property name="zip1" type="string">
+            <column name="ZIP1" length="24" not-null="true" />
+        </property>
+        <property name="country1" type="string">
+            <column name="COUNTRY1" length="24" not-null="true" />
+        </property>
+        <property name="address21" type="string">
+            <column name="ADDRESS2_1" length="72" not-null="true" />
+        </property>
+        <property name="address22" type="string">
+            <column name="ADDRESS2_2" length="72" not-null="true" />
+        </property>
+        <property name="city2" type="string">
+            <column name="CITY2" length="24" not-null="true" />
+        </property>
+        <property name="state2" type="string">
+            <column name="STATE2" length="24" not-null="true" />
+        </property>
+        <property name="zip2" type="string">
+            <column name="ZIP2" length="24" not-null="true" />
+        </property>
+        <property name="country2" type="string">
+            <column name="COUNTRY2" length="24" not-null="true" />
+        </property>
+        <property name="mailto" type="int">
+            <column name="MAILTO" not-null="true" />
+        </property>
+        <property name="hphone" type="string">
+            <column name="HPHONE" length="24" not-null="true" />
+        </property>
+        <property name="wphone1" type="string">
+            <column name="WPHONE1" length="24" not-null="true" />
+        </property>
+        <property name="wphone2" type="string">
+            <column name="WPHONE2" length="24" not-null="true" />
+        </property>
+        <property name="mphone" type="string">
+            <column name="MPHONE" length="24" not-null="true" />
+        </property>
+        <property name="phoneto" type="int">
+            <column name="PHONETO" not-null="true" />
+        </property>
+        <property name="fax1" type="string">
+            <column name="FAX1" length="24" not-null="true" />
+        </property>
+        <property name="fax2" type="string">
+            <column name="FAX2" length="24" not-null="true" />
+        </property>
+        <property name="email1" type="string">
+            <column name="EMAIL1" length="72" not-null="true" />
+        </property>
+        <property name="email2" type="string">
+            <column name="EMAIL2" length="72" not-null="true" />
+        </property>
+        <property name="emailto" type="int">
+            <column name="EMAILTO" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="URL" length="150" not-null="true" />
+        </property>
+        <property name="acuity" type="byte">
+            <column name="ACUITY" not-null="true" />
+        </property>
+        <property name="pricontact" type="string">
+            <column name="PRICONTACT" length="14" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="CATEGORY" length="24" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="COMMENTS" length="65535" not-null="true" />
+        </property>
+        <property name="abstract_" type="string">
+            <column name="ABSTRACT" length="65535" not-null="true" />
+        </property>
+        <property name="audit" type="string">
+            <column name="AUDIT" length="65535" not-null="true" />
+        </property>
+        <property name="active" type="boolean">
+            <column name="ACTIVE" not-null="true" />
+        </property>
+        <property name="dirid" type="string">
+            <column name="DIRID" length="24" not-null="true" />
+        </property>
+        <property name="import_" type="string">
+            <column name="IMPORT" length="24" not-null="true" />
+        </property>
+        <property name="dob" type="string">
+            <column name="DOB" length="8" not-null="true" />
+        </property>
+        <property name="doa" type="string">
+            <column name="DOA" length="8" not-null="true" />
+        </property>
+        <property name="edoa" type="string">
+            <column name="EDOA" length="8" not-null="true" />
+        </property>
+        <property name="dod" type="string">
+            <column name="DOD" length="8" not-null="true" />
+        </property>
+        <property name="edod" type="string">
+            <column name="EDOD" length="8" not-null="true" />
+        </property>
+        <property name="initialcontact" type="string">
+            <column name="INITIALCONTACT" length="8" not-null="true" />
+        </property>
+        <property name="ethnic" type="string">
+            <column name="ETHNIC" length="24" not-null="true" />
+        </property>
+        <property name="religion" type="string">
+            <column name="RELIGION" length="254" not-null="true" />
+        </property>
+        <property name="liveswith" type="string">
+            <column name="LIVESWITH" length="72" not-null="true" />
+        </property>
+        <property name="ssnum" type="string">
+            <column name="SSNUM" length="24" not-null="true" />
+        </property>
+        <property name="provider" type="string">
+            <column name="PROVIDER" length="24" not-null="true" />
+        </property>
+        <property name="provider2" type="string">
+            <column name="PROVIDER2" length="24" not-null="true" />
+        </property>
+        <property name="provider3" type="string">
+            <column name="PROVIDER3" length="24" not-null="true" />
+        </property>
+        <property name="provider4" type="string">
+            <column name="PROVIDER4" length="24" not-null="true" />
+        </property>
+        <property name="altid" type="string">
+            <column name="ALTID" length="254" not-null="true" />
+        </property>
+        <property name="globalid" type="string">
+            <column name="GLOBALID" length="254" not-null="true" />
+        </property>
+        <property name="pgroup" type="string">
+            <column name="PGROUP" length="24" not-null="true" />
+        </property>
+        <property name="school" type="string">
+            <column name="SCHOOL" length="72" not-null="true" />
+        </property>
+        <property name="grade" type="string">
+            <column name="GRADE" length="24" not-null="true" />
+        </property>
+        <property name="lupdate" type="string">
+            <column name="LUPDATE" length="14" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="LOCATION" length="65535" not-null="true" />
+        </property>
+        <property name="referrer" type="string">
+            <column name="REFERRER" length="254" not-null="true" />
+        </property>
+        <property name="salutation" type="string">
+            <column name="SALUTATION" length="254" not-null="true" />
+        </property>
+        <property name="qualified" type="boolean">
+            <column name="QUALIFIED" not-null="true" />
+        </property>
+        <property name="inactiveReason" type="string">
+            <column name="INACTIVE_REASON" length="254" not-null="true" />
+        </property>
+        <property name="pin" type="string">
+            <column name="PIN" length="24" not-null="true" />
+        </property>
+        <property name="bnid" type="string">
+            <column name="BNID" length="24" not-null="true" />
+        </property>
+        <property name="readonly" type="byte">
+            <column name="READONLY" not-null="true" />
+        </property>
+        <property name="undeleteable" type="byte">
+            <column name="UNDELETEABLE" not-null="true" />
+        </property>
+        <property name="feeSchedule" type="int">
+            <column name="FEE_SCHEDULE" not-null="true" />
+        </property>
+        <property name="transgender" type="int">
+            <column name="TRANSGENDER" not-null="true" />
+        </property>
+        <property name="facilityId" type="int">
+            <column name="facilityId" not-null="true" />
+        </property>
+        <property name="cashOnly" type="string">
+            <column name="cashOnly" length="1" not-null="true" />
+        </property>
+        <property name="ethnicityId" type="int">
+            <column name="ethnicityId" not-null="true" />
+        </property>
+        <property name="smokingStatusId" type="int">
+            <column name="smokingStatusId" not-null="true" />
+        </property>
+        <property name="smokingStatusDate" type="timestamp">
+            <column name="smokingStatusDate" length="0" not-null="true" />
+        </property>
+        <property name="motherMaidenName" type="string">
+            <column name="MOTHER_MAIDEN_NAME" length="254" not-null="true" />
+        </property>
+        <property name="maritalStatusCode" type="string">
+            <column name="maritalStatusCode" length="10" not-null="true" />
+        </property>
+        <property name="languageCode" type="string">
+            <column name="languageCode" length="10" not-null="true" />
+        </property>
+        <property name="communicationPreference" type="string">
+            <column name="communicationPreference" length="10" not-null="true" />
+        </property>
+        <property name="nextOfKin" type="string">
+            <column name="nextOfKin" length="20" />
+        </property>
+        <property name="mpi" type="int">
+            <column name="MPI" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 29, 2016 12:38:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="OauthClientDetails" table="oauth_client_details" catalog="qrda">
+        <id name="clientId" type="string">
+            <column name="client_id" length="256" />
+            <generator class="assigned" />
+        </id>
+        <property name="resourceIds" type="string">
+            <column name="resource_ids" length="256" />
+        </property>
+        <property name="clientSecret" type="string">
+            <column name="client_secret" length="256" />
+        </property>
+        <property name="scope" type="string">
+            <column name="scope" length="256" />
+        </property>
+        <property name="authorizedGrantTypes" type="string">
+            <column name="authorized_grant_types" length="256" />
+        </property>
+        <property name="webServerRedirectUri" type="string">
+            <column name="web_server_redirect_uri" length="256" />
+        </property>
+        <property name="authorities" type="string">
+            <column name="authorities" length="256" />
+        </property>
+        <property name="accessTokenValidity" type="java.lang.Integer">
+            <column name="access_token_validity" />
+        </property>
+        <property name="refreshTokenValidity" type="java.lang.Integer">
+            <column name="refresh_token_validity" />
+        </property>
+        <property name="additionalInformation" type="string">
+            <column name="additional_information" length="4096" />
+        </property>
+        <property name="autoapprove" type="string">
+            <column name="autoapprove" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

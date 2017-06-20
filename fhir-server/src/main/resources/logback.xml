@@ -1,0 +1,98 @@
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- Daily rollover -->
+			<fileNamePattern>/FHIR-log/Server.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+
+			<!-- Keep 10 day's log history -->
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{56} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Spring-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- Daily rollover -->
+			<fileNamePattern>/FHIR-log/Spring.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+
+			<!-- Keep 10 day's log history -->
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Hibernate-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- Daily rollover -->
+			<fileNamePattern>/FHIR-log/Hibernate.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+
+			<!-- Keep 10 day's log history -->
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FHIR-Base-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- Daily rollover -->
+			<fileNamePattern>/FHIR-log/Base.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+
+			<!-- Keep 10 day's log history -->
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework" level="debug" additivity="false">
+		<appender-ref ref="Spring-FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="org.hibernate" level="debug" additivity="false">
+		<appender-ref ref="Hibernate-FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="ca.uhn" level="debug" additivity="false">
+		<appender-ref ref="FHIR-Base-FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<!-- Log to both console and log file -->
+	<root level="DEBUG">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>  

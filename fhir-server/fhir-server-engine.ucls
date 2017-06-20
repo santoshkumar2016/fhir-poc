@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.13" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="ca.uhn.fhir.model.dstu2.resource.Patient" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-structures-dstu2/2.2-SNAPSHOT/hapi-fhir-structures-dstu2-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="534" width="333" x="18" y="-2538"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="ca.uhn.fhir.rest.server.RestfulServer" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-base/2.2-SNAPSHOT/hapi-fhir-base-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="543" width="389" x="385" y="-2536"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <annotation id="3" language="java" name="ca.uhn.fhir.rest.annotation.Read" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-base/2.2-SNAPSHOT/hapi-fhir-base-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="99" width="164" x="793" y="-2134"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <annotation id="4" language="java" name="ca.uhn.fhir.rest.annotation.Delete" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-base/2.2-SNAPSHOT/hapi-fhir-base-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1084" y="-2088"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <annotation id="5" language="java" name="ca.uhn.fhir.rest.annotation.Update" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-base/2.2-SNAPSHOT/hapi-fhir-base-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="81" width="163" x="792" y="-2032"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <annotation id="6" language="java" name="ca.uhn.fhir.rest.annotation.Create" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-base/2.2-SNAPSHOT/hapi-fhir-base-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="81" width="165" x="1006" y="-2038"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <class id="7" language="java" name="ca.uhn.fhir.rest.api.MethodOutcome" project="fhir-server" 
+    file="C:/Users/santosh/.m2/repository/ca/uhn/hapi/fhir/hapi-fhir-base/2.2-SNAPSHOT/hapi-fhir-base-2.2-SNAPSHOT.jar" 
+    binary="true" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1018" y="-2338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
