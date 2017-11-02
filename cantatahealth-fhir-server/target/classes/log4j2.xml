@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration name="SPSLogConfig" strict="true"
+	monitorInterval="60" packages="ca.uhn">
+	<Properties>
+		<Property name="logDir">/opt/var/log/fhir</Property>
+	</Properties>
+	<Filter type="ThresholdFilter" level="trace" />
+	<Appenders>
+		<Appender type="Console" name="Console" target="SYSTEM_OUT">
+			<Layout type="PatternLayout">
+				<Pattern>%d [%t] %-5level %logger{36} - %C{1}.%M %m %ex%n</Pattern>
+			</Layout>
+		</Appender>
+		<RollingFile name="File" fileName="${logDir}/fhir.log"
+			filePattern="${logDir}/fhir-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d [%t] %-5level %logger{56} - %C{1}.%M %m %ex%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<!-- <SizeBasedTriggeringPolicy size="6 MB"/> -->
+			</Policies>
+		</RollingFile>
+
+		<RollingFile name="FileError" fileName="${logDir}/fhir-error.log"
+			filePattern="${logDir}/fhir-error-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d [%t] %-5level %logger{56} - %C{1}.%M %m %ex%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<!-- <SizeBasedTriggeringPolicy size="6 MB"/> -->
+			</Policies>
+		</RollingFile>
+		<!-- <JDBC name="DB" tableName="logging_event"> <ConnectionFactory class="ca.uhn.fhir.jpa.demo.ConnectionFactory" 
+			method="getDatabaseConnection" /> <Column name="EVENT_ID" /> <Column name="timestmp" 
+			isEventTimestamp="true" /> <Column name="level_string" pattern="%level" /> 
+			<Column name="logger_name" pattern="%logger" /> <Column name="formatted_message" 
+			pattern="%message" /> <Column name="THROWABLE" pattern="%ex{full}" /> </JDBC> -->
+
+
+		<appender name="DB" class="org.apache.log4j.jdbc.JDBCAppender">
+			<param name="url" value="jdbc:mysql://localhost/DBNAME" />
+			<param name="driver" value="com.mysql.jdbc.Driver" />
+			<param name="user" value="user_id" />
+			<param name="password" value="password" />
+			<param name="sql" value="INSERT INTO LOGS VALUES('%x','%d','%C','%p','%m')" />
+
+			<layout class="org.apache.log4j.PatternLayout">
+			</layout>
+		</appender>
+
+	</Appenders>
+	<Loggers>
+		<!-- <Logger name="ca.uhn" level="info"> <RegexFilter regex=".*\b(Source)\b.*" 
+			onMatch="ACCEPT" onMismatch="DENY"/> <AppenderRef ref="DB" /> </Logger> -->
+		<Logger name="ca.uhn" level="error">
+			<AppenderRef ref="FileError" />
+		</Logger>
+		Logger >
+
+		<Root level="debug">
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>

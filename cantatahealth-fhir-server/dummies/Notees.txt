@@ -1,0 +1,1 @@
+Add each resource entry to fhorrestfuleservlet and fhirserverconfig
